@@ -622,6 +622,97 @@
     .conc-icons{ gap:10px; }
   }
 
+
+  /* ============================================================
+     MOBILE LEGIBILITY PASS — final overrides
+     ============================================================ */
+  @media (max-width: 600px){
+    /* Keep the full Manoir Émery wordmark visible on phones. */
+    .brand-logo{
+      background-image:var(--logo-wm) !important;
+      width:148px !important;
+      height:22px !important;
+      max-width:44vw;
+    }
+    .nav-inner{ height:64px; }
+    .lang{ font-size:9px; letter-spacing:.08em; }
+    .burger span{ width:20px; }
+
+    /* The facade was too dark behind the copy. Brighten the photo and
+       use a directional scrim so the copy stays readable without losing
+       the cinematic hotel look. */
+    .hero .facade-photo{
+      filter:brightness(1.42) saturate(.88) contrast(.94);
+      background-position:58% center;
+    }
+    .hero .facade-scrim{
+      background:
+        linear-gradient(90deg,
+          rgba(13,19,15,.86) 0%,
+          rgba(13,19,15,.67) 34%,
+          rgba(13,19,15,.34) 68%,
+          rgba(13,19,15,.22) 100%),
+        linear-gradient(180deg,
+          rgba(13,19,15,.28) 0%,
+          rgba(13,19,15,.12) 34%,
+          rgba(13,19,15,.42) 72%,
+          rgba(13,19,15,.78) 100%);
+    }
+    .hero .facade-tone{ opacity:.45; }
+    .hero-decor .dec{ display:none !important; }
+
+    /* Give the hero copy more visual presence. */
+    .hero-inner{
+      padding-top:78px;
+      padding-bottom:58px;
+    }
+    .hero-copy{ max-width:340px; }
+    .hero .eyebrow{
+      font-size:9px;
+      letter-spacing:.18em;
+      margin-bottom:18px;
+      color:#D0B77F;
+    }
+    .hero h1{
+      font-size:clamp(45px,13.2vw,58px);
+      line-height:.99;
+      letter-spacing:-.025em;
+      max-width:8.5ch;
+      text-shadow:0 2px 18px rgba(0,0,0,.5);
+    }
+    .hero .sub{
+      font-size:10.5px;
+      line-height:1.45;
+      letter-spacing:.12em;
+      margin-top:20px;
+      color:rgba(245,239,230,.82);
+    }
+    .direct-badge{
+      display:flex;
+      align-items:center;
+      width:max-content;
+      max-width:100%;
+      margin-top:18px;
+      font-size:8.5px;
+      line-height:1.25;
+      letter-spacing:.075em;
+      padding:6px 10px 6px 6px;
+      background:rgba(27,33,29,.72);
+      backdrop-filter:blur(5px);
+    }
+    .direct-badge .pct{ font-size:10px; padding:5px 7px; }
+    .hero .discover{ margin-top:26px; font-size:8.5px; }
+    .hero .discover .ring{ width:32px; height:32px; }
+  }
+
+  @media (max-width: 390px){
+    .brand-logo{ width:136px !important; max-width:42vw; }
+    .hero-inner{ padding-bottom:52px; }
+    .hero h1{ font-size:44px; }
+    .hero .sub{ font-size:10px; }
+    .direct-badge{ font-size:8px; }
+  }
+
 </style>
 
 <!-- ================= NAV ================= -->
