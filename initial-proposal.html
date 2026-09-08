@@ -1209,9 +1209,10 @@
     const show=()=>{ if(menu.classList.contains('open')) return; reopen.hidden=true; if(backdrop) backdrop.classList.add('show'); panel.classList.add('show'); panel.setAttribute('aria-hidden','false'); };
     const hide=()=>{ panel.classList.remove('show'); if(backdrop) backdrop.classList.remove('show'); panel.setAttribute('aria-hidden','true'); };
     const arm=(delay)=>{ clearTimeout(idle); idle=setTimeout(show, delay); };
-    // start the slow fade almost as soon as the scroll stops; the 5s fade lives in CSS
+    // Show the proposal 35 seconds after scrolling stops.
+    // Any new scroll cancels/resets the 35-second countdown.
     let lastY=window.scrollY;
-    addEventListener('scroll',()=>{ const y=window.scrollY; if(Math.abs(y-lastY)<3){ return; } lastY=y; hide(); arm(280); }, {passive:true});
+    addEventListener('scroll',()=>{ const y=window.scrollY; if(Math.abs(y-lastY)<3){ return; } lastY=y; hide(); arm(35000); }, {passive:true});
     // closing hides it for now — it returns the next time the scroll stops
     closeBtn.addEventListener('click',()=>{ clearTimeout(idle); hide(); reopen.hidden=false; });
     reopen.addEventListener('click',()=>{ show(); });
