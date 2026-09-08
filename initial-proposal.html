@@ -1312,3 +1312,104 @@
     btn.addEventListener('click',()=> setLang(window.SITE_LANG==='en'?'fr':'en'));
   })();
 </script>
+
+<style>
+/* MOBILE TYPOGRAPHY & SPACING FIX — final */
+@media (max-width: 600px){
+  html,body{overflow-x:hidden}
+  body{font-size:17px;line-height:1.6}
+  .wrap{padding-inline:20px}
+  .pad{padding-block:76px}
+
+  /* Never allow editorial headings to overlap or become too narrow. */
+  section h2,
+  .rooms h2,.lobby h2,.conc h2,.nuit h2,.itin h2,.details h2,
+  .map-sec h2,.seasons h2,.foot-cta h2{
+    font-size:clamp(38px,11.2vw,52px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-.018em !important;
+    max-width:none !important;
+    width:100%;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+
+  /* Hero is deliberately larger and gets a little more breathing room. */
+  .hero{min-height:100svh;min-height:100dvh}
+  .hero-inner{padding-top:92px;padding-bottom:62px}
+  .hero-copy{max-width:100%}
+  .hero h1{
+    font-size:clamp(48px,14vw,60px) !important;
+    line-height:1.02 !important;
+    max-width:9.5ch !important;
+    letter-spacing:-.035em !important;
+  }
+  .hero .sub{
+    font-size:12px !important;
+    line-height:1.5 !important;
+    letter-spacing:.105em !important;
+    max-width:32ch !important;
+    margin-top:22px !important;
+  }
+  .direct-badge{
+    width:auto !important;
+    max-width:100% !important;
+    white-space:normal !important;
+    font-size:10px !important;
+    line-height:1.35 !important;
+    padding:7px 11px 7px 7px !important;
+  }
+  .direct-badge .pct{font-size:11px !important}
+  .hero .discover{font-size:9px !important;margin-top:30px}
+
+  /* Location: don't force an 11-character measure on a phone. */
+  .map-sec h2{max-width:100% !important}
+  .map-wrap{margin-top:40px;gap:30px 14px}
+  .map-center{width:220px;height:220px}
+  .poi .k{font-size:10px}
+  .poi .t{font-size:10px;line-height:1.4}
+
+  /* All content headings get independent vertical spacing. */
+  .rooms h2,.lobby h2,.conc h2,.nuit h2,.itin h2,.details h2{margin-top:0 !important}
+  .rooms .rt,.lobby-inner>div:first-child,.conc-inner>div:last-child,.nuit-inner>div:first-child{min-width:0}
+  .rooms .lead,.lobby .lead,.conc .lead,.nuit .lead{font-size:17px;line-height:1.6}
+
+  .seasons h2{margin-bottom:34px !important;text-align:center}
+  .season-grid{gap:12px}
+  .season .nm{font-size:10px}
+
+  /* Cards: readable labels, no compressed text. */
+  .deck .card{min-height:180px}
+  .deck .card .nm{font-size:10px;letter-spacing:.15em}
+  .conc-photo .note{width:min(74%,230px);padding:17px 18px}
+  .conc-photo .note p{font-size:21px;line-height:1.25}
+
+  .nuit ul li{font-size:19px;line-height:1.35;padding:13px 0}
+  .nuit .close{font-size:21px;line-height:1.35}
+
+  .day .step .lb{font-size:17px;line-height:1.4}
+  .day .step .tm{font-size:10px}
+  .mat .nm{font-size:10px}
+
+  .foot-cta h2{font-size:clamp(42px,12vw,58px) !important}
+
+  /* Proposal cards stay readable on phones. */
+  .proposal{max-height:92dvh;padding:28px 16px 16px}
+  .prop-head h3{font-size:28px;line-height:1.12}
+  .prop-sub{font-size:12px;line-height:1.45}
+  .tier .t-price{font-size:28px}
+  .tier .t-tag{font-size:14px}
+  .tier li{font-size:12px;line-height:1.4}
+}
+
+@media (max-width:390px){
+  .wrap{padding-inline:18px}
+  .hero-inner{padding-bottom:56px}
+  .hero h1{font-size:47px !important;max-width:9.2ch !important}
+  .hero .sub{font-size:11px !important}
+  section h2,.rooms h2,.lobby h2,.conc h2,.nuit h2,.itin h2,.details h2,.map-sec h2{font-size:39px !important;line-height:1.08 !important}
+  .map-center{width:200px;height:200px}
+  .poi .k{font-size:9px}
+  .poi .t{font-size:9px}
+}
+</style>
