@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manoir Émery — Boutique hotel, Quartier Latin, Montréal</title>
+<meta name="description" content="Manoir Émery, a 15-room boutique hotel in Montréal's Quartier Latin. Every detail, looked after.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/manoir-emery-monograma-verde.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&amp;family=Archivo:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&amp;display=swap">
+<style>
+body{margin:0;background:#202622}
+a{color:inherit}a:hover{color:#BAA169}
+.me{--screen:clamp(620px,100vh,980px);--olive:#8B9B74;--charcoal:#202622;--dkgreen:#303635;--forest:#505C4C;--beige:#E5DCD2;--cream:#F5EFE6;--copper:#BAA169;font-family:'Newsreader',Georgia,serif;font-weight:300;color:#F5EFE6;background:#202622;-webkit-font-smoothing:antialiased}
+.me *{box-sizing:border-box}
+.cap{font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.24em;font-size:11px}
+.ttl{font-family:'Archivo Narrow','Helvetica Neue',Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:.95;margin:0}
+.it{font-style:italic}
+.screen{position:relative;height:var(--screen);overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center}
+.kb{animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.5%,-1%,0)}}
+.veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,24,22,.45) 0%,rgba(20,24,22,0) 28%,rgba(20,24,22,0) 55%,rgba(20,24,22,.62) 100%)}
+.vign{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(10,12,11,.55) 100%)}
+.grain{position:absolute;inset:-50%;pointer-events:none;background-image:url(assets/manoir-emery-grano-pelicula.png);opacity:var(--grain,.5);mix-blend-mode:overlay;animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+.glass{background:rgba(245,239,230,.10);-webkit-backdrop-filter:blur(var(--blur,18px)) saturate(140%);backdrop-filter:blur(var(--blur,18px)) saturate(140%);border:1px solid rgba(245,239,230,.28);box-shadow:0 30px 80px rgba(10,12,11,.28),inset 0 1px 0 rgba(255,255,255,.18)}
+.glass-dark{background:rgba(32,38,34,.34);-webkit-backdrop-filter:blur(var(--blur,18px)) saturate(130%);backdrop-filter:blur(var(--blur,18px)) saturate(130%);border:1px solid rgba(245,239,230,.22)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border:0;border-radius:0;background:#8B9B74;color:#202622;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .35s ease,color .35s ease}
+.btn:hover{background:#BAA169;color:#202622}
+.lnk{font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+.field{display:flex;flex-direction:column;gap:6px;padding:14px 20px;border-right:1px solid rgba(245,239,230,.22);min-width:0}
+.field label{font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,230,.82)}
+.field input,.field select{appearance:none;-webkit-appearance:none;background:transparent;border:0;border-radius:0;color:#F5EFE6;font-family:'Newsreader',Georgia,serif;font-size:18px;font-weight:300;padding:0;color-scheme:dark;width:100%;outline:none}
+.field select option{color:#202622}
+.field:focus-within{background:rgba(245,239,230,.08)}
+.bars{position:absolute;left:0;right:0;height:7vh;max-height:64px;background:#0f1211;z-index:3;animation:bars 2.4s cubic-bezier(.7,0,.2,1) .4s forwards}
+@keyframes bars{to{height:0}}
+.rise{opacity:0;transform:translateY(24px);animation:rise 1.6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.track{position:absolute;inset:0;display:flex;will-change:transform;transition:transform 1.3s cubic-bezier(.77,0,.18,1)}
+.slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
+.ctl{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:0;background:transparent;color:#F5EFE6;cursor:pointer;padding:0;transition:background .3s ease}
+.ctl:hover{background:rgba(245,239,230,.22)}
+.ctl svg{width:18px;height:18px}
+.dot{flex:1;height:44px;border:0;background:transparent;padding:0;cursor:pointer;display:flex;align-items:center}
+.dot span{display:block;width:100%;height:1px;background:rgba(245,239,230,.35);transition:background .4s ease,height .4s ease}
+.ico{display:inline-flex;align-items:center;gap:8px;font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:.08em}
+.ico svg{width:18px;height:18px}
+.tag{display:inline-block;padding:6px 10px;font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.paper{background:#FBF8F2;color:#202622;position:relative;box-shadow:0 40px 120px rgba(10,12,11,.45)}
+.paper::before{content:"";position:absolute;inset:18px;border:1px solid #8B9B74;opacity:.55;pointer-events:none}
+.street{position:absolute;background:#E5DCD2}
+.slbl{position:absolute;font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#505C4C;white-space:nowrap}
+@media (max-width:820px){
+.navlinks{display:none !important}
+.field{border-right:0;border-bottom:1px solid rgba(245,239,230,.22)}
+.hide-sm{display:none !important}
+}
+@media (prefers-reduced-motion:reduce){.kb,.grain,.rise,.bars{animation:none !important;opacity:1}.track{transition:none}}
+</style>
+</head>
+<body>
+<div class="me" style="--blur: 18px; --grain: 0.5; width: 100%; overflow-x: hidden">
+
+<!-- ================= HEADER ================= -->
+<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px clamp(16px, 4vw, 56px)">
+<a href="#top" aria-label="Manoir Émery – Montréal, Quartier Latin" style="display: block; line-height: 0"><img src="assets/manoir-emery-logo-beige.png" alt="Manoir Émery" style="width: 118px; height: auto; display: block"></a>
+<nav class="navlinks cap" aria-label="Main" style="display: flex; gap: 36px; font-size: 11px">
+<a href="#manoir" style="text-decoration: none">The Manoir</a>
+<a href="#rooms" style="text-decoration: none">Rooms</a>
+<a href="#discover" style="text-decoration: none">Discover Montréal</a>
+<a href="#location" style="text-decoration: none">Contact</a>
+<span style="opacity: .75">EN / FR</span>
+</nav>
+<a href="#book" class="glass cap" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; text-decoration: none; font-size: 11px; box-shadow: none">Book now</a>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="screen" aria-label="Welcome" style="height: max(var(--screen), 680px)">
+<video class="bg kb" src="assets/manoir-emery-hero-video.mp4" poster="assets/manoir-emery-hero-poster.webp" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+<div class="veil" style="background: linear-gradient(180deg, rgba(20,24,22,.55) 0%, rgba(20,24,22,.05) 30%, rgba(20,24,22,.15) 55%, rgba(20,24,22,.78) 100%)"></div>
+<div class="vign"></div>
+<div class="grain"></div>
+<div class="bars" style="top: 0"></div>
+<div class="bars" style="bottom: 0"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; padding: 0 clamp(16px, 4vw, 56px) clamp(24px, 5vh, 48px); display: flex; flex-direction: column; gap: clamp(28px, 5vh, 52px)">
+<div style="max-width: 900px; display: flex; flex-direction: column; gap: 20px">
+<p class="cap rise" style="margin: 0; animation-delay: 1.4s">Boutique hotel · Quartier Latin, Montréal</p>
+<h1 class="rise" style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 300; font-size: clamp(46px, 7.4vw, 112px); line-height: .98; letter-spacing: -.02em; animation-delay: 1.7s">Every detail, <span class="it">looked after.</span></h1>
+</div>
+<form class="glass rise" aria-label="Check availability" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); align-items: stretch; max-width: 1040px; animation-delay: 2.1s" onsubmit="event.preventDefault()">
+<div class="field"><label for="arr">Arrival</label><input id="arr" type="date" value="2026-11-14"></div>
+<div class="field"><label for="dep">Departure</label><input id="dep" type="date" value="2026-11-16"></div>
+<div class="field"><label for="gst">Guests</label><select id="gst"><option>1 guest</option><option selected="">2 guests</option><option>3 guests</option><option>4 guests</option></select></div>
+<button type="submit" class="btn" style="min-height: 72px; width: 100%">Check availability</button>
+</form>
+</div>
+<div class="cap hide-sm" style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(140px, 22vh, 200px); z-index: 4; writing-mode: vertical-rl; font-size: 10px; opacity: .7">Scroll</div>
+</section>
+
+<!-- ================= 01 THE MANOIR ================= -->
+<section id="manoir" class="screen" aria-label="01 The Manoir" style="height: max(var(--screen), 760px)">
+<div class="track" data-track="manoir" style="transform: translateX(0%)">
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-lobby-bailarina.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-salon-chimenea-cuadro.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-lobby-vista-calle.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-entrada-puertas-verdes.webp); background-position: center 30%"></div></div>
+</div>
+<div class="veil" style="background: linear-gradient(90deg, rgba(20,24,22,.70) 0%, rgba(20,24,22,.25) 45%, rgba(20,24,22,0) 70%)"></div>
+<div class="vign"></div>
+<div class="grain"></div>
+<div style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 96px clamp(16px, 4vw, 56px) 72px">
+<div style="max-width: 560px; display: flex; flex-direction: column; gap: 28px">
+<p class="cap" style="margin: 0; color: #C9D3BA">01 · The Manoir</p>
+<h2 class="ttl" style="font-size: clamp(44px, 6vw, 88px)">A house on<br>rue Émery</h2>
+<p style="margin: 0; font-size: clamp(19px, 1.7vw, 23px); line-height: 1.5; color: rgba(245,239,230,.92)">Built in [year] as a [original use — e.g. family residence] in the heart of the Quartier Latin, the manoir has watched the neighbourhood change for more than a century. We restored it slowly — marble floors, iron doors, a fireplace that is lit again — and kept only fifteen rooms, so every one can be <span class="it">looked after.</span></p>
+<div class="glass-dark" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))">
+<div style="padding: 18px 20px; border-right: 1px solid rgba(245,239,230,.2)"><div class="ttl" style="font-size: 34px; color: #C9D3BA">[18xx]</div><div class="cap" style="font-size: 9px; margin-top: 8px; opacity: .85">Built</div></div>
+<div style="padding: 18px 20px; border-right: 1px solid rgba(245,239,230,.2)"><div class="ttl" style="font-size: 34px; color: #C9D3BA">2026</div><div class="cap" style="font-size: 9px; margin-top: 8px; opacity: .85">Restored</div></div>
+<div style="padding: 18px 20px"><div class="ttl" style="font-size: 34px; color: #C9D3BA">15</div><div class="cap" style="font-size: 9px; margin-top: 8px; opacity: .85">Rooms</div></div>
+</div>
+<a href="#" class="lnk" style="align-self: flex-start">Our story →</a>
+</div>
+<div style="position: absolute; left: clamp(16px, 4vw, 56px); right: clamp(16px, 4vw, 56px); bottom: 32px; display: flex; align-items: center; gap: 14px">
+<span class="cap" style="font-size: 10px; opacity: .8" data-caption="manoir">The lobby</span>
+<div style="margin-left: auto; position: relative; z-index: 10; display: flex; align-items: center; gap: 14px">
+<span class="cap" style="font-size: 10px; min-width: 64px; text-align: right" data-label="manoir">01 / 04</span>
+<div class="hide-sm" data-dots="manoir" data-n="4" style="display: flex; gap: 6px; width: 180px"></div>
+<div class="glass-dark" style="display: flex"><button type="button" class="ctl" aria-label="Previous" data-prev="manoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button type="button" class="ctl" aria-label="Next" data-next="manoir" style="border-left: 1px solid rgba(245,239,230,.22)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= 02 ROOMS (stacked) ================= -->
+<section id="rooms" aria-label="02 Rooms" class="screen" style="height: max(var(--screen), 720px)" data-swipe="rooms">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 0; z-index: 10">
+<div style="position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: baseline; justify-content: space-between; padding: 30px clamp(16px, 4vw, 56px); pointer-events: none">
+<a href="#" class="ttl" style="font-size: clamp(30px, 3.6vw, 52px); text-decoration: none; pointer-events: auto; display: inline-flex; align-items: baseline; gap: 18px"><span class="it" style="font-family: 'Newsreader', Georgia, serif; font-weight: 300; text-transform: none; font-size: .7em; color: #C9D3BA">02</span>Rooms <span aria-hidden="true" style="font-weight: 500">→</span></a>
+<span class="cap hide-sm" style="font-size: 10px; opacity: .85">Four ways to stay</span>
+</div>
+</div>
+
+<div class="track" data-track="rooms" style="transform: translateX(0%)">
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-habitacion-executive-queen.webp)"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(440px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 18px">
+<div class="cap" style="font-size: 10px; opacity: .8">01 / 04</div>
+<h3 class="ttl" style="font-size: 38px">Junior Queen</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<span class="ico" title="Surface"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17"></rect><path d="M3.5 9h6v11.5"></path></svg>16 m²</span>
+<span class="ico" title="Beds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H10v5M6.5 12.2a1.7 1.7 0 1 0 0-.01"></path></svg>1 queen</span>
+<span class="ico" title="Guests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"></path></svg>2</span>
+</div>
+<a href="#" class="lnk" style="align-self: flex-start">See the room →</a>
+</div>
+</article>
+
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-balcon-arboles.webp); background-position: center 40%"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(440px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 18px">
+<div class="cap" style="font-size: 10px; opacity: .8">02 / 04</div>
+<h3 class="ttl" style="font-size: 38px">Junior Queen<br>with Balcony</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<span class="ico" title="Surface"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17"></rect><path d="M3.5 9h6v11.5"></path></svg>16 m²</span>
+<span class="ico" title="Beds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H10v5M6.5 12.2a1.7 1.7 0 1 0 0-.01"></path></svg>1 queen</span>
+<span class="ico" title="Guests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"></path></svg>2</span>
+<span class="ico" title="Private balcony"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 9h18M3 20h18M5 9v11M9 9v11M13 9v11M17 9v11M21 9v11M7 9V4h10v5"></path></svg>Balcony</span>
+</div>
+<a href="#" class="lnk" style="align-self: flex-start">See the room →</a>
+</div>
+</article>
+
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-habitacion-junior-queen.webp)"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(440px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 18px">
+<div class="cap" style="font-size: 10px; opacity: .8">03 / 04</div>
+<h3 class="ttl" style="font-size: 38px">Executive Queen</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<span class="ico" title="Surface"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17"></rect><path d="M3.5 9h6v11.5"></path></svg>23 m²</span>
+<span class="ico" title="Beds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H10v5M6.5 12.2a1.7 1.7 0 1 0 0-.01"></path></svg>1 queen</span>
+<span class="ico" title="Guests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"></path></svg>2</span>
+<span class="ico" title="Wet bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M7 4h10l-1 6a4 4 0 0 1-8 0zM12 14v6M8.5 20h7"></path></svg>Wet bar</span>
+</div>
+<a href="#" class="lnk" style="align-self: flex-start">See the room →</a>
+</div>
+</article>
+
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-habitacion-two-queen-consola.webp)"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(440px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 18px">
+<div class="cap" style="font-size: 10px; opacity: .8">04 / 04</div>
+<h3 class="ttl" style="font-size: 38px">Two Queen Beds<br>with Balcony</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<span class="ico" title="Surface"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17"></rect><path d="M3.5 9h6v11.5"></path></svg>35 m²</span>
+<span class="ico" title="Beds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H10v5M6.5 12.2a1.7 1.7 0 1 0 0-.01"></path></svg>2 queen</span>
+<span class="ico" title="Guests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"></path></svg>4</span>
+<span class="ico" title="Private balcony"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 9h18M3 20h18M5 9v11M9 9v11M13 9v11M17 9v11M21 9v11M7 9V4h10v5"></path></svg>Balcony</span>
+</div>
+<a href="#" class="lnk" style="align-self: flex-start">See the room →</a>
+</div>
+</article>
+</div>
+<div style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(20px, 4vh, 40px); z-index: 10; display: flex; align-items: center; gap: 14px">
+<span class="cap" style="font-size: 10px; min-width: 64px; text-align: right" data-label="rooms">01 / 04</span>
+<div class="hide-sm" data-dots="rooms" data-n="4" style="display: flex; gap: 6px; width: 180px"></div>
+<div class="glass-dark" style="display: flex"><button type="button" class="ctl" aria-label="Previous" data-prev="rooms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button type="button" class="ctl" aria-label="Next" data-next="rooms" style="border-left: 1px solid rgba(245,239,230,.22)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>
+</div>
+</section>
+
+<!-- ================= 03 NEWS (stacked) ================= -->
+<section id="news" aria-label="03 News" class="screen" style="height: max(var(--screen), 720px)" data-swipe="news">
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 0; z-index: 10">
+<div style="position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 4vw, 56px); pointer-events: none">
+<div class="ttl" style="font-size: clamp(30px, 3.6vw, 52px); display: inline-flex; align-items: baseline; gap: 18px"><span class="it" style="font-family: 'Newsreader', Georgia, serif; font-weight: 300; text-transform: none; font-size: .7em; color: #C9D3BA">03</span>Coming up</div>
+<a href="#" class="lnk" style="pointer-events: auto">All news →</a>
+</div>
+</div>
+
+<div class="track" data-track="news" style="transform: translateX(0%)">
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-lobby-reception.webp); background-position: center 45%"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(460px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px"><span class="tag" style="background: #8B9B74; color: #202622">At the Manoir</span><span class="cap" style="font-size: 10px">[Date] · Lobby</span></div>
+<h3 style="margin: 0; font-weight: 300; font-size: 40px; line-height: 1.05">[Evening title]</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="#" class="lnk">Details →</a><a href="#top" class="lnk" style="color: #C9D3BA">Stay those dates</a></div>
+</div>
+</article>
+
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-entrada-puertas-verdes.webp); background-position: center 35%"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(460px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px"><span class="tag" style="background: #F3B857; color: #202622">In the city</span><span class="cap" style="font-size: 10px">[Date] · Quartier des Spectacles</span></div>
+<h3 style="margin: 0; font-weight: 300; font-size: 40px; line-height: 1.05">Jazz under <span class="it">the stars</span></h3>
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="#" class="lnk">Details →</a><a href="#top" class="lnk" style="color: #C9D3BA">Stay those dates</a></div>
+</div>
+</article>
+
+<article class="slide">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-habitacion-queen-afiche.webp)"></div>
+<div class="veil"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(92px, 12vh, 112px); width: min(460px, calc(100% - 32px)); padding: 28px 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px"><span class="tag" style="background: #F3B857; color: #202622">In the city</span><span class="cap" style="font-size: 10px">[Date] · Rue Saint-Denis</span></div>
+<h3 style="margin: 0; font-weight: 300; font-size: 40px; line-height: 1.05">A night at <span class="it">the theatre</span></h3>
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="#" class="lnk">Details →</a><a href="#top" class="lnk" style="color: #C9D3BA">Stay those dates</a></div>
+</div>
+</article>
+</div>
+<div style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(20px, 4vh, 40px); z-index: 10; display: flex; align-items: center; gap: 14px">
+<span class="cap" style="font-size: 10px; min-width: 64px; text-align: right" data-label="news">01 / 03</span>
+<div class="hide-sm" data-dots="news" data-n="3" style="display: flex; gap: 6px; width: 180px"></div>
+<div class="glass-dark" style="display: flex"><button type="button" class="ctl" aria-label="Previous" data-prev="news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button type="button" class="ctl" aria-label="Next" data-next="news" style="border-left: 1px solid rgba(245,239,230,.22)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>
+</div>
+</section>
+
+<!-- ================= 04 DISCOVER MONTRÉAL ================= -->
+<section id="discover" class="screen" aria-label="04 Discover Montréal" style="height: max(var(--screen), 820px)">
+<div class="track" data-track="discover" style="transform: translateX(0%)">
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-terraza-otono.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-detalle-monograma.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-colgador-puerta-verde.webp)"></div></div>
+<div class="slide"><div class="bg kb" style="background-image: url(assets/manoir-emery-terraza-patio.webp); background-position: center 60%"></div></div>
+</div>
+<div class="veil" style="background: linear-gradient(180deg, rgba(20,24,22,.55) 0%, rgba(20,24,22,.2) 40%, rgba(20,24,22,.7) 100%)"></div>
+<div class="vign"></div><div class="grain"></div>
+<div style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 96px clamp(16px, 4vw, 56px) 56px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 720px">
+<p class="cap" style="margin: 0; color: #C9D3BA">04 · Concierge</p>
+<h2 class="ttl" style="font-size: clamp(44px, 6vw, 88px)">Discover Montréal</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.5; color: rgba(245,239,230,.92)">Our concierge's guide to the city, <span class="it">a few streets at a time.</span></p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<a href="#" class="glass" style="display: flex; flex-direction: column; gap: 40px; padding: 26px; text-decoration: none; box-shadow: none">
+<span class="cap" style="font-size: 10px; color: #C9D3BA">Neighbourhood</span>
+<span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px"><span class="it" style="font-size: 30px; line-height: 1.1">A slow morning</span><span aria-hidden="true">→</span></span>
+</a>
+<a href="#" class="glass" style="display: flex; flex-direction: column; gap: 40px; padding: 26px; text-decoration: none; box-shadow: none">
+<span class="cap" style="font-size: 10px; color: #C9D3BA">Itineraries</span>
+<span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px"><span class="it" style="font-size: 30px; line-height: 1.1">Two days on foot</span><span aria-hidden="true">→</span></span>
+</a>
+<a href="#" class="glass" style="display: flex; flex-direction: column; gap: 40px; padding: 26px; text-decoration: none; box-shadow: none">
+<span class="cap" style="font-size: 10px; color: #C9D3BA">Evenings</span>
+<span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px"><span class="it" style="font-size: 30px; line-height: 1.1">Quiet evenings</span><span aria-hidden="true">→</span></span>
+</a>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+<a href="#" class="lnk">The guide →</a>
+<div style="position: relative; z-index: 10; display: flex; align-items: center; gap: 14px">
+<span class="cap" style="font-size: 10px; min-width: 64px; text-align: right" data-label="discover">01 / 04</span>
+<div class="hide-sm" data-dots="discover" data-n="4" style="display: flex; gap: 6px; width: 180px"></div>
+<div class="glass-dark" style="display: flex"><button type="button" class="ctl" aria-label="Previous" data-prev="discover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button type="button" class="ctl" aria-label="Next" data-next="discover" style="border-left: 1px solid rgba(245,239,230,.22)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= 05 LOCATION (white) ================= -->
+<section id="location" aria-label="05 Location" style="background: #F5EFE6; color: #202622; padding: clamp(72px, 10vw, 140px) clamp(16px, 4vw, 56px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(40px, 6vw, 96px); align-items: center">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<p class="cap" style="margin: 0; color: #505C4C">05 · Location</p>
+<h2 class="ttl" style="font-size: clamp(44px, 6vw, 88px); color: #8B9B74">Latin Quarter</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: 110px 1fr; border-top: 1px solid #E5DCD2">
+<dt class="cap" style="font-size: 10px; padding: 18px 0; border-bottom: 1px solid #E5DCD2; color: #505C4C">Metro</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #E5DCD2; font-size: 20px">Berri–UQAM, <span class="it">steps away</span></dd>
+<dt class="cap" style="font-size: 10px; padding: 18px 0; border-bottom: 1px solid #E5DCD2; color: #505C4C">Culture</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #E5DCD2; font-size: 20px">Quartier des Spectacles</dd>
+<dt class="cap" style="font-size: 10px; padding: 18px 0; border-bottom: 1px solid #E5DCD2; color: #505C4C">Airport</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #E5DCD2; font-size: 20px">747 bus or taxi from YUL</dd>
+<dt class="cap" style="font-size: 10px; padding: 18px 0; border-bottom: 1px solid #E5DCD2; color: #505C4C">Parking</dt><dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #E5DCD2; font-size: 20px">Indigo, across the street · <a href="#" style="color: #505C4C">Details ↗</a></dd>
+</dl>
+<a href="#" class="lnk" style="align-self: flex-start; color: #303635">Getting here →</a>
+</div>
+<div role="img" aria-label="Schematic map: Manoir Émery on rue Émery, between Saint-Denis and Berri, near Berri–UQAM metro" style="flex: 1 1 460px; min-width: 0; position: relative; aspect-ratio: 5 / 4; background: #FBF8F2; border: 1px solid #E5DCD2; overflow: hidden">
+<div class="street" style="left: 0; right: 0; top: 18%; height: 10px"></div><span class="slbl" style="left: 4%; top: calc(18% - 18px)">Rue Ontario Est</span>
+<div class="street" style="left: 0; right: 0; top: 52%; height: 14px; background: #D9E0CF"></div><span class="slbl" style="left: 4%; top: calc(52% - 20px); color: #303635; font-weight: 500">Rue Émery</span>
+<div class="street" style="left: 0; right: 0; top: 80%; height: 10px"></div><span class="slbl" style="left: 4%; top: calc(80% + 16px)">Bd de Maisonneuve</span>
+<div class="street" style="top: 0; bottom: 0; left: 26%; width: 10px"></div><span class="slbl" style="left: calc(26% + 16px); top: 4%">Saint-Denis</span>
+<div class="street" style="top: 0; bottom: 0; left: 52%; width: 8px"></div><span class="slbl" style="left: calc(52% + 14px); top: 4%">Sanguinet</span>
+<div class="street" style="top: 0; bottom: 0; left: 78%; width: 10px"></div><span class="slbl" style="left: calc(78% + 16px); top: 4%">Berri</span>
+<div style="position: absolute; left: calc(40% - 22px); top: calc(52% - 50px); display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="width: 44px; height: 44px; background: #303635; display: flex; align-items: center; justify-content: center"><img src="assets/manoir-emery-monograma-beige.png" alt="" style="height: 26px"></span>
+<span class="slbl" style="position: static; color: #303635; font-weight: 500">Manoir Émery</span>
+</div>
+<div style="position: absolute; left: calc(78% - 12px); top: calc(80% - 10px); width: 34px; height: 34px; border: 1px solid #505C4C; background: #FBF8F2; display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-size: 12px; color: #303635">M</div>
+<span class="slbl" style="left: calc(78% - 70px); top: calc(80% + 30px)">Berri–UQAM</span>
+<a href="#" class="cap" style="position: absolute; right: 16px; bottom: 14px; font-size: 10px; color: #303635">Open in Google Maps ↗</a>
+</div>
+</div>
+</section>
+
+<!-- ================= 06 REVIEWS (paper over photo) ================= -->
+<section aria-label="06 Guest Reviews" class="screen" style="height: auto; min-height: var(--screen); display: flex; align-items: center; justify-content: center; padding: 96px clamp(16px, 4vw, 56px)">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-pasillo-grabados.webp); filter: blur(2px) brightness(.72)"></div>
+<div class="vign"></div><div class="grain"></div>
+<div class="paper" style="position: relative; z-index: 2; width: min(1080px, 100%); padding: clamp(48px, 6vw, 88px) clamp(28px, 6vw, 88px)">
+<img src="assets/manoir-emery-monograma-verde.png" alt="" style="position: absolute; top: 34px; right: 40px; height: 34px; opacity: .14">
+<p class="cap" style="margin: 0 0 18px; color: #505C4C">06 · Guest reviews</p>
+<h2 class="ttl" style="font-size: clamp(40px, 5vw, 72px); color: #8B9B74; margin-bottom: 48px">Kind words</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(28px, 4vw, 56px)">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px"><blockquote style="margin: 0; font-size: 22px; line-height: 1.4" class="it">“[Placeholder review — replace with a verified guest quote.]”</blockquote><figcaption class="cap" style="font-size: 10px; color: #505C4C">[Name] · [Source]</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px"><blockquote style="margin: 0; font-size: 22px; line-height: 1.4" class="it">“[Placeholder review — replace with a verified guest quote.]”</blockquote><figcaption class="cap" style="font-size: 10px; color: #505C4C">[Name] · [Source]</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px"><blockquote style="margin: 0; font-size: 22px; line-height: 1.4" class="it">“[Placeholder review — replace with a verified guest quote.]”</blockquote><figcaption class="cap" style="font-size: 10px; color: #505C4C">[Name] · [Source]</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- ================= 07 BOOK DIRECT ================= -->
+<section id="book" class="screen" aria-label="07 Book direct" style="height: max(var(--screen), 720px); display: flex; align-items: center; justify-content: center; padding: 72px clamp(16px, 4vw, 56px)">
+<div class="bg kb" style="background-image: url(assets/manoir-emery-terraza-patio.webp); background-position: center 55%"></div>
+<div class="veil" style="background: rgba(20,24,22,.32)"></div><div class="vign"></div><div class="grain"></div>
+<div class="glass" style="position: relative; z-index: 2; width: min(620px, 100%); padding: clamp(36px, 5vw, 64px); display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+<p class="cap" style="margin: 0; color: #DCE3D2">07 · Book direct</p>
+<h2 style="margin: 0; font-weight: 300; font-size: clamp(44px, 5.4vw, 76px); line-height: 1">Your room <span class="it">is ready.</span></h2>
+<div style="display: flex; align-items: baseline; gap: 14px"><span class="ttl" style="font-size: 64px; color: #C9D3BA">10%</span><span class="cap" style="font-size: 10px; text-align: left; line-height: 1.7">Below online<br>travel agencies</span></div>
+<a href="#top" class="btn" style="min-width: 220px">Book</a>
+<div class="cap" style="font-size: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; opacity: .9">
+<a href="tel:+15144705000" style="text-decoration: none">+1 (514) 470-5000</a><a href="#" style="text-decoration: none">WhatsApp</a><a href="mailto:info@manoiremery.com" style="text-decoration: none; text-transform: none; letter-spacing: .1em">info@manoiremery.com</a><a href="#" style="text-decoration: none; text-transform: none; letter-spacing: .1em">@manoiremery</a>
+</div>
+</div>
+</section>
+
+<!-- ================= FOOTER (white) ================= -->
+<footer style="background: #F5EFE6; color: #202622; padding: clamp(64px, 8vw, 104px) clamp(16px, 4vw, 56px) 32px">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px 64px; justify-content: space-between">
+<img src="assets/manoir-emery-logo-verde-oscuro.png" alt="Manoir Émery – Montréal, Quartier Latin" style="width: 150px; height: auto; align-self: flex-start">
+<nav aria-label="Explore" style="display: flex; flex-direction: column; gap: 12px; font-size: 17px"><span class="cap" style="font-size: 10px; color: #505C4C; margin-bottom: 6px">Explore</span><a href="#top" style="text-decoration: none">Home</a><a href="#rooms" style="text-decoration: none">Rooms</a><a href="#manoir" style="text-decoration: none">The Manoir</a><a href="#location" style="text-decoration: none">Location</a><a href="#discover" style="text-decoration: none">Discover Montréal</a></nav>
+<nav aria-label="Your stay" style="display: flex; flex-direction: column; gap: 12px; font-size: 17px"><span class="cap" style="font-size: 10px; color: #505C4C; margin-bottom: 6px">Your stay</span><a href="#" style="text-decoration: none">FAQ &amp; policies</a><a href="#" style="text-decoration: none">Parking</a><a href="#" style="text-decoration: none">Contact</a><a href="#book" style="text-decoration: none">Book now</a></nav>
+<address style="font-style: normal; display: flex; flex-direction: column; gap: 12px; font-size: 17px"><span class="cap" style="font-size: 10px; color: #505C4C; margin-bottom: 6px">Contact</span><a href="tel:+15144705000" style="text-decoration: none">+1 (514) 470-5000</a><a href="#" style="text-decoration: none">WhatsApp</a><a href="mailto:info@manoiremery.com" style="text-decoration: none">info@manoiremery.com</a><a href="#" style="text-decoration: none">Instagram</a><span>[Street address], rue Émery, Montréal</span></address>
+</div>
+<div class="cap" style="font-size: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid #303635; color: #303635">
+<span>© 2026 Manoir Émery</span>
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><span>EN / FR</span><a href="#" style="text-decoration: none">Privacy</a><a href="#" style="text-decoration: none">Cookies</a></span>
+</div>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+  var N={manoir:4,rooms:4,news:3,discover:4}, cap={manoir:['The lobby','The salon','Reception','The façade']};
+  var st={}, touched={};
+  function render(k){
+    var i=st[k], n=N[k];
+    var t=document.querySelector('[data-track="'+k+'"]'); if(t) t.style.transform='translateX('+(-100*i)+'%)';
+    var l=document.querySelector('[data-label="'+k+'"]'); if(l) l.textContent='0'+(i+1)+' / 0'+n;
+    var c=document.querySelector('[data-caption="'+k+'"]'); if(c && cap[k]) c.textContent=cap[k][i];
+    document.querySelectorAll('[data-dots="'+k+'"] .dot span').forEach(function(s,j){ s.style.background=j===i?'#F5EFE6':''; s.style.height=j===i?'2px':''; });
+    var slides=t?t.children:[]; for(var j=0;j<slides.length;j++){ slides[j].setAttribute('aria-hidden', j===i?'false':'true'); }
+  }
+  function go(k,i,user){ var n=N[k]; if(user) touched[k]=true; st[k]=((i%n)+n)%n; render(k); }
+  Object.keys(N).forEach(function(k){
+    st[k]=0;
+    var d=document.querySelector('[data-dots="'+k+'"]');
+    if(d){ for(var j=0;j<N[k];j++){ (function(j){ var b=document.createElement('button'); b.type='button'; b.className='dot'; b.setAttribute('aria-label','Slide '+(j+1)+' of '+N[k]); b.appendChild(document.createElement('span')); b.addEventListener('click',function(){go(k,j,true);}); d.appendChild(b); })(j); } }
+    document.querySelectorAll('[data-prev="'+k+'"]').forEach(function(b){ b.addEventListener('click',function(){go(k,st[k]-1,true);}); });
+    document.querySelectorAll('[data-next="'+k+'"]').forEach(function(b){ b.addEventListener('click',function(){go(k,st[k]+1,true);}); });
+    var s=document.querySelector('[data-swipe="'+k+'"]'), x0=null;
+    if(s){ s.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+           s.addEventListener('touchend',function(e){ if(x0==null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(k,st[k]+(dx<0?1:-1),true); x0=null; },{passive:true}); }
+    render(k);
+  });
+  var reduce=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce) setInterval(function(){ if(document.hidden) return; Object.keys(N).forEach(function(k){ if(!touched[k]) go(k,st[k]+1,false); }); },6500);
+  var v=document.querySelector('video'); if(v){ v.muted=true; var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+})();
+</script>
+</body>
+</html>
