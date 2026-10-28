@@ -50,11 +50,6 @@ a{color:#202622}
 .oo-h1{font-size:44px;line-height:52px}
 .oo-h2{font-size:40px;line-height:48px}
 .oo-h3{font-size:32px;line-height:40px}
-.oo-inset{height:640px !important}
-.oo-wall-img{object-position:46% 50% !important}
-.oo-wall-copy{left:57% !important;width:min(50%, 176px) !important;transform:translate(-50%,-50%) !important}
-.oo-wall-copy h2{font-size:26px !important;line-height:30px !important}
-.oo-wall-text{font-size:12px !important;line-height:19px !important}
 .oo-fc-row{flex-direction:column !important;gap:28px !important}
 .oo-fc-row > *{flex:1 1 auto !important;width:100% !important}
 .oo-fc-rev{flex-direction:column !important}
@@ -97,16 +92,18 @@ a{color:#202622}
   </header>
 
   <!-- ================= PRODUCT HERO CON MÁRGENES · THE MANOIR ================= -->
-  <section id="manoir" class="oo-pad" style="padding-top: 96px; padding-bottom: 32px">
-    <div class="oo-inset" style="position: relative; height: 596px; overflow: hidden; background: #202622">
-      <img class="oo-wall-img" src="assets/manoir-emery-lobby-bailarina.webp" alt="Lobby of the Manoir with marble floor, mouldings, a dancer poster and iron-framed glass doors" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%">
-      <!-- Texto pintado sobre el muro de estuco, entre las dos puertas de hierro -->
-      <div class="oo-wall-copy" style="position: absolute; left: 42.4%; width: 17%; top: 46%; transform: translateY(-50%); color: #1A1E1B; mix-blend-mode: multiply; opacity: 0.9; text-align: left">
-        <p class="oo-eyebrow" style="margin-bottom: 14px; font-size: 12px; line-height: 16px; letter-spacing: 3.5px; color: #1A1E1B">The Manoir</p>
-        <h2 style="margin: 0 0 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 38px; letter-spacing: -0.5px; color: #1A1E1B">Every detail in its place</h2>
-        <p class="oo-p oo-wall-text" style="margin-bottom: 10px; font-size: 13px; line-height: 21px; color: #1A1E1B">Fifteen rooms, kept with care. A reception open from 8:30 to 23:00 and the Quartier Latin just outside.</p>
-        <a class="oo-link" href="#manoir" style="color: #1A1E1B"><span>Our story</span></a>
-      </div>
+  <section id="manoir" class="oo-pad" style="position: relative; padding-top: 96px; padding-bottom: 32px">
+    <!-- El texto está pintado dentro de la foto (perspectiva, luz y textura del muro). Abajo, el mismo texto en HTML para SEO y lectores de pantalla. -->
+    <a class="oo-inset" href="#manoir" aria-label="Our story — The Manoir: Every detail in its place" style="position: relative; display: block; overflow: hidden; background: #202622">
+      <picture>
+        <source media="(max-width: 900px)" srcset="assets/manoir-emery-lobby-pared-texto-mobile.webp" width="680" height="980">
+        <img src="assets/manoir-emery-lobby-pared-texto-desktop.webp" width="1920" height="883" alt="Lobby of the Manoir: on the stucco wall between the iron doors is painted “The Manoir — Every detail in its place. Fifteen rooms, kept with care. Reception 8:30 – 23:00. Our story”" style="display: block; width: 100%; height: auto">
+      </picture>
+    </a>
+    <div style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0">
+      <p>The Manoir</p>
+      <h2>Every detail in its place</h2>
+      <p>Fifteen rooms, kept with care. Reception open from 8:30 to 23:00.</p>
     </div>
   </section>
 
